@@ -10,8 +10,9 @@ public class User {
     @GeneratedValue
     private Long id;
     private String username;
-    private String name;
-    private String email;
+    private String password;
+    private String category;
+    private String avatar;
 
     public Long getId() {
         return id;
@@ -29,19 +30,27 @@ public class User {
         this.username = username;
     }
 
-    public String getName() {
-        return name;
+    public String getPassword() {
+        return password;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCategory() {
+        return category;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 }
