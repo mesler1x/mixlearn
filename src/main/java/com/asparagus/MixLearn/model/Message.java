@@ -1,47 +1,33 @@
 package com.asparagus.MixLearn.model;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
 public class Message {
     @Id
     @GeneratedValue
     private Long id;
+
+    @NotEmpty
+    @Min(1)
     private Long memberFrom;
+
+    @NotEmpty
+    @Min(1)
     private Long memberTo;
+
+    @NotNull(message = "Message must not be empty")
     private String text;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getMemberFrom() {
-        return memberFrom;
-    }
-
-    public void setMemberFrom(Long memberFrom) {
-        this.memberFrom = memberFrom;
-    }
-
-    public Long getMemberTo() {
-        return memberTo;
-    }
-
-    public void setMemberTo(Long memberTo) {
-        this.memberTo = memberTo;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
 }
