@@ -33,4 +33,9 @@ public class ArticleController {
     List<Article> articleList(){
         return articleService.findAll();
     }
+
+    @GetMapping("/articles")
+    List<Article> articleList(){
+        return articleRepository.findAll();
+    }
 }

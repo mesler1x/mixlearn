@@ -31,8 +31,13 @@ public class MessageController {
 
     @GetMapping("/messages")
     List<Message> messageList(){
+<<<<<<< Updated upstream
         return messageService.findAll();
     }
 
 
+=======
+        return messageRepository.findAll();
+    }
+>>>>>>> Stashed changes
 }
