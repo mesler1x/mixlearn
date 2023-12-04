@@ -33,4 +33,11 @@ public class UserController {
     List<User> userList (){
         return userService.findAll();
     }
+
+    @PostMapping("/user/{id}")
+    User editUserById(@RequestBody User user){
+        // TODO: 04.12.2023  сделать сохранение настроек в базе при применении новых настроек в профиле пользователя
+        //
+        return user;
+    }
 }

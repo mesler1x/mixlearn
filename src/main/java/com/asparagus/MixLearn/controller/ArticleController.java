@@ -2,7 +2,6 @@ package com.asparagus.MixLearn.controller;
 
 import com.asparagus.MixLearn.exception.ArticleNotFoundException;
 import com.asparagus.MixLearn.model.Article;
-import com.asparagus.MixLearn.repository.ArticleRepository;
 import com.asparagus.MixLearn.services.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
