@@ -19,7 +19,7 @@ public class User {
     @Id
     @GeneratedValue
     private Long id;
-<<<<<<< Updated upstream
+
 
     @NotEmpty(message = "Name must not be empty")
     @Size(min=2, max=100, message ="Name length must be between 2 and 100 characters")
@@ -27,9 +27,7 @@ public class User {
 
     @NotEmpty(message = "Username must not be empty")
     @Size(min=2, max=100, message ="Username length must be between 2 and 100 characters")
-=======
-    private String name;
->>>>>>> Stashed changes
+
     private String username;
 
     @NotEmpty(message = "Password must not be empty")
@@ -39,8 +37,7 @@ public class User {
     private String category;
 
     private String avatar;
-<<<<<<< Updated upstream
-=======
+
 
     public Long getId() {
         return id;
@@ -88,5 +85,5 @@ public class User {
     public void setAvatar(String avatar) {
         this.avatar = avatar;
     }
->>>>>>> Stashed changes
+
 }
